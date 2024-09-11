@@ -32,7 +32,7 @@ It's { advance_time() }
 
 
 + [Stroll down the beach] -> beach2
-+ [Go for a swim] -> swim
+* { time == 2 } [Go for a swim] -> swim
 -> DONE
 
 == beach2 ==
@@ -51,10 +51,14 @@ You pick up the shells... oooohhh prettyyyyyy.....
 
 == swim ==
 You hop in the water. It's not too cold but not necessarily warm, and it definitely isn't fun to get in your eyes, considering it's saltwater.
+{time}
+{time != 2 : ->END}
 
-{ time == 2 }: Though it's dark, with the help of the moonlight you can see something in the water...
-+ {time == 2}: [Go towards the mystery in the water] -> silly_guy
-+ {time == 2}: [RUN !!!!!!!!!!] -> seashore
+{time == 2 :
+    Though it's dark, with the help of the moonlight you can see something in the water...
+    +[Go towards the mystery in the water] -> silly_guy
+    +[RUN !!!!!!!!!!] -> seashore
+}
 
  == silly_guy ==
  You were quite scared at first, but it turns out the mystery in the water was a friendly little manta ray!! He just wants to say hi and get some pets :3

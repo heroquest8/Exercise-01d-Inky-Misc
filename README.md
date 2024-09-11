@@ -1,5 +1,5 @@
 # Exercise-01d-Inky-Misc
 
-# Your Name
+# Hero DeMaio
 
-# Your Github username
+# heroquest8
